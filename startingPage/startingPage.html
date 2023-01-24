@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Changing a Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	  
+	<style>
+		h3 	{
+			text-align: center;
+		}
+	
+		body	{
+			background-color: #99ccff;
+			padding: .5em;
+		}
+	
+		#displayArea	{
+			background-color: #fff;
+			border-radius: 25px;
+			height: 15em;					
+			text-align: center;					
+			box-shadow: 7px 7px 5px #606060;
+			margin-top: 1.5em;
+		}
+		
+		#buttonArea		{
+			text-align: center;
+			margin-top: 1.5em;
+		}
+	
+	</style>
+	
+	<script src="js/script.js"></script>
+   
+</head>
+<body>
+
+<div class="container-fluid">
+	<h3>Using JavaScript to Modify a Webpage</h3>
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6" id="displayArea">
+			<p>This is my display area. I can use JavaScript to change its contents.</p>
+		</div>
+		<div class="col-sm-3"></div>    
+	</div>
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6" id="buttonArea">
+			<button type="button" class="btn btn-outline-secondary" onclick="changeText()">Change Text</button>
+			<button type="button" class="btn btn-outline-secondary" onclick="showImg()">Show Image</button>
+			<button type="button" class="btn btn-outline-secondary" onclick="callMath()">Do Math</button>
+		</div>
+		<div class="col-sm-3"></div>    
+	</div>
+</div>
+</body>
+</html>
