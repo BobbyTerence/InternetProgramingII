@@ -1,0 +1,31 @@
+h3 	{text-align: center;}
+	
+body	{
+	background-color: #cec56a;
+	padding: .5em;
+}
+		
+#form-div	{
+	margin-top: 1.5em;
+	font-size: 1.25em;
+}
+	
+#displayArea	{
+    background-color: #fff;
+	border-radius: 25px;
+	min-height: 15em;					
+	text-align: center;					
+	box-shadow: 7px 7px 0px #cec56a;
+	margin-top: 1.5em;
+	font-size: 1.25em;
+}
+		
+#btn-pad {
+	text-align: center;
+	margin-top: 1em;
+}
+
+#btn-pad button	{
+	width: 45%;
+	margin: .2em;
+}

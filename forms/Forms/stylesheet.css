@@ -1,0 +1,22 @@
+h3 {
+    text-align: center;
+}
+
+body {
+    background-color: #99ccff;
+    padding: .5em;
+}
+
+#displayArea {
+    background-color: #fff;
+    border-radius: 25px;
+    height: 15em;
+    text-align: center;
+    box-shadow: 7px 7px 5px #606060;
+    margin-top: 1.5em;
+}
+
+#buttonArea {
+    text-align: center;
+    margin-top: 1.5em;
+}

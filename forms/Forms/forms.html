@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Forms</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="stylesheet.css">
+
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <h3>Using JavaScript to Modify a WebPage</h3>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4" id="formDiv">
+                    <form id="name-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                        </div>
+                        <div class="form-group">
+                            <label for="comments">Comments:</label>
+                            <textarea class="form-control" id="comments" name="comments"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-secondary" onclick="processForm()">Process Form</button>
+                    </form>
+                </div>
+                <div class="col-md-4" id="displayArea">
+                    <p>Output will go here.</p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </body>
+</html>
