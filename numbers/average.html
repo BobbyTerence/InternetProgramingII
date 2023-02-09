@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>This Doing Numbers</title>
+        <meta charset="utf-8">
+        <meta num2="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="stylesheet.css">
+
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <h3>Calculate Averages</h3>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4" id="form-div">
+                    <form>
+                        <div class="form-group">
+                            <label for="score1">Test Score:</label>
+                            <input type="number" class="form-control" placeholder="Enter a Test Score" id="score1" min="0" max="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="score2">Test Score:</label>
+                            <input type="number" class="form-control" placeholder="Enter a Test Score" id="score2" min="0" max="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="score3">Test Score:</label>
+                            <input type="number" class="form-control" placeholder="Enter a Test Score" id="score3" min="0" max="100">
+                        </div>
+                        <div class="row">
+                            <div class="col" id="btn-pad">
+                                <button type="button" class="btn btn-outline-secondary" onclick="doAverage()">Average</button>
+                                <button type="button" class="btn btn-outline-secondary" onclick="clearForm()">Clear</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4" id="displayArea">
+                    <p>Scores and Average go here</p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </body>
+</html>
