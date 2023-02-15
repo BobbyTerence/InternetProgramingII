@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>I Like Pennies</title>
+        <meta charset="utf-8">
+        <meta num2="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="stylesheet.css">
+
+        
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <h3>I Like Penies</h3>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" id="styled">
+                    <h2>Enter Number of Pennies:</h2>
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <form>
+                                <input type="number" class="form-control" placeholder="Enter Amount of Pennies" id="pennies" min="1" max="10000">
+                                <div class="col" id="btn-pad">
+                                    <button type="button" class="btn btn-outline-secondary" onclick="convertPennies()">Convert</button>
+                                    <button type="button" class="btn btn-outline-secondary" onclick="clearForm()">Clear</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" id="styled">
+                    <div id="contained">
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-2" id="change-grid">
+                                <h3 id="label">Dollars:</h3>
+                            </div>
+                            <div class="col-md-2" id="change-grid" id="dollar-display">
+                                <p></p>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-2" id="change-grid">
+                                <h3 id="label">Quarters:</h3>
+                            </div>
+                            <div class="col-md-2" id="change-grid" id="quarter-display">
+                                <!--This is where the answer will go-->
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-2" id="change-grid">
+                                <h3 id="label">Dime:</h3>
+                            </div>
+                            <div class="col-md-2" id="change-grid" id="dime-display">
+                                <!--This is where the answer will go-->
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-2" id="change-grid">
+                                <h3 id="label">Nickle:</h3>
+                            </div>
+                            <div class="col-md-2" id="change-grid" id="nickle-display">
+                                <!--This is where the answer will go-->
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-2" id="change-grid">
+                                <h3 id="label">Pennies:</h3>
+                            </div>
+                            <div class="col-md-2" id="change-grid" id="penny-display">
+                                <!--This is where the answer will go-->
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+
+        <script src="coins.js"></script>
+    </body>
+</html>

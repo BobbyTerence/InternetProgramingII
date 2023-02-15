@@ -1,0 +1,61 @@
+h3 {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Label id is to seperate the h3 formatting to display the answer of the script */
+#label {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: antiquewhite;
+}
+	
+body {
+	background-color: #cec56a;
+	padding: .5em;
+}
+		
+#form-div	{
+	margin-top: 1.5em;
+	font-size: 1.25em;
+}
+
+#styled {
+    background-color: #cc9b40;
+    border-style: inset;
+    border-color: #EBC498;
+    border-radius: .75em;
+    margin: 2px;
+}
+
+#styled h2, form {
+    margin: .75em;
+}
+
+#contained {
+    margin-top: .75em;
+    margin-bottom: .75em;
+}
+
+#change-grid {
+    border-style: solid;
+    border-color: antiquewhite;
+}
+		
+#btn-pad {
+	text-align: center;
+	margin-top: 1em;
+    
+}
+
+#btn-pad button	{
+	width: 45%;
+	margin: .2em;
+    border-color: antiquewhite;
+    color: antiquewhite;
+}
