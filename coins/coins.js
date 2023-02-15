@@ -12,9 +12,9 @@ function convertPennies() {
     let dollar = parseInt(pennies) / parseInt(DOLLAR);
     pennies = parseInt(pennies) % parseInt(DOLLAR);
     //Display it
-   // let dollarDisplay = "<p>" + dollar + "</p>";
+    let dollarDisplay = "<p>" + dollar + "</p>";
     let testValue = "My Brother in Christ, what do you mean this is null???";
-    document.getElementById("dollar-display").innerHTML = testValue;
+    document.getElementById("dollar-display").innerHTML = testValue.toString();
 
     //Total number of quarters
     let quarter = parseInt(pennies) / parseInt(QUARTER);
