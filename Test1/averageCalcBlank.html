@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Average</title>
+		<style>
+			body {
+				font-family: arial;
+				font-size: 14pt;
+				background: #e6f2ff;
+			}
+			
+			table {
+				margin-right: auto;
+				margin-left: auto;
+				width: 40%;
+				background: white;
+				padding: 20px;
+				border: solid blue 2px;
+				border-radius: 25px;
+				box-shadow: 7px 7px 5px #afafaf;
+			}
+
+			th, td {
+				width: 50%;			
+			}
+
+			h1 {
+				text-align: center;
+				color: blue;
+				text-shadow: 3px 3px 1px #afafaf;
+			}
+					
+			input {
+				width: 200px;
+				height: 30px;
+				font-size: 14pt;
+				text-align: center;
+			}
+		</style>
+		
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		<h1>Grade Calculator</h1>
+		<form id="gradeForm">
+			<table>
+				<tr>
+					<th>Assignments:</th>
+					<th><input type="number" id="assign-score" min="0" max="100"></th>
+				</tr>
+				<tr>
+					<th>Tests:</th>
+					<th><input type="number" id="test-score" min="0" max="100"></th>
+				</tr>
+				<tr>
+					<th>Project:</th>
+					<th><input type="number" id="proj-score" min="0" max="100"></th>
+				</tr>
+				<tr>
+					<th><input type="button" value="Calculate" onclick="calcGrade()" id="btnCalc"></th>
+					<th><input type="reset" value="Reset" onclick="resetForm()"></th>
+				</tr>
+				<tr>
+					<th>Average:</th>
+					<th><input type="number" id="average-out"></th>
+				</tr>
+				<tr>
+					<th>Letter Grade:</th>
+					<th><input type="text" id="letter-grade"></th>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
