@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Mid Term</title>
+        <meta charset="utf-8">
+        <meta num2="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <style>
+			body {
+				font-family: arial;
+				font-size: 14pt;
+				background: #e98d68;
+                color: antiquewhite;
+			}
+
+            form {
+                text-align: center;
+                border-radius: .5em;
+                margin-bottom: 2em;
+            }
+
+            #display-area {
+                text-align: center;
+                background-color: #b97053;
+            }
+
+			h1 {
+				text-align: center;
+				color: antiquewhite;
+				text-shadow: 3px 3px 1px #afafaf;
+                margin-top: 1.5em;
+                margin-bottom: 1.5em;
+			}
+		</style>
+
+        <script src="midTerm.js"></script>
+    </head>
+
+    <body class="container-fluid">
+        <h1>Math Practice</h1>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <form id="math-problems">
+                    <div class="form-row" class="form-group" id="addition">
+                        <div class="col-2">
+                            <input type="button" class="btn btn-secondary btn-block" value="Addition" onclick="mathAdd()">
+                        </div>
+                        <div class="col-2">
+                            <input type="text" id="add1" readonly>
+                        </div>
+                        <div class="col-2">
+                            <p>+</p>
+                        </div>
+                        <div class="col-2">
+                            <input type="text" id="add2" readonly>
+                        </div>
+                        <div class="col-2">
+                            <input type="number" id="add-input">
+                            <input type="hidden" id="add-answer">
+                        </div>
+                        <div class="col-2">
+                            <input type="button" class="btn btn-secondary btn-block" id="add-btn" value="Submit" onclick="compare(document.getElementById('add-answer').value, document.getElementById('add-input').value, this)">
+                        </div>
+                    </div>
+                    <div class="form-row" class="form-group" id="subtraction">
+                        <div class="col-2">
+                            <input type="button" class="btn btn-secondary btn-block" value="Subtraction" onclick="mathSub()">
+                        </div>
+                        <div class="col-2">
+                            <input type="text" id="sub1" readonly>
+                        </div>
+                        <div class="col-2">
+                            <p>-</p>
+                        </div>
+                        <div class="col-2">
+                            <input type="text" id="sub2" readonly>
+                        </div>
+                        <div class="col-2">
+                            <input type="number" id="sub-input">
+                            <input type="hidden" id="sub-answer">
+                        </div>
+                        <div class="col-2">
+                            <input type="button" class="btn btn-secondary btn-block" id="sub-btn" value="Submit" onclick="compare(document.getElementById('sub-answer').value, document.getElementById('sub-input').value, this)">
+                        </div>
+                    </div>
+                    <div class="form-row" class="form-group" id="multiplication">
+                        <div class="col-2">
+                            <input type="button" class="btn btn-secondary btn-block" value="Multiplication" onclick="mathMult()">
+                        </div>
+                        <div class="col-2">
+                            <input type="text" id="mult1" readonly>
+                        </div>
+                        <div class="col-2">
+                            <p>*</p>
+                        </div>
+                        <div class="col-2">
+                            <input type="text" id="mult2" readonly>
+                        </div>
+                        <div class="col-2">
+                            <input type="number" id="mult-input">
+                            <input type="hidden" id="mult-answer">
+                        </div>
+                        <div class="col-2">
+                            <input type="button" class="btn btn-secondary btn-block" id="mult-btn" value="Submit" onclick="compare(document.getElementById('mult-answer').value, document.getElementById('mult-input').value, this)">
+                        </div>
+                    </div>
+                    <div class="form-row" class="form-group" id="division">
+                        <div class="col-2">
+                            <input type="button" class="btn btn-secondary btn-block" value="Division" onclick="mathDiv()">
+                        </div>
+                        <div class="col-2">
+                            <input type="text" id="div1" readonly>
+                        </div>
+                        <div class="col-2">
+                            <p>/</p>
+                        </div>
+                        <div class="col-2">
+                            <input type="text" id="div2" readonly>
+                        </div>
+                        <div class="col-2">
+                            <input type="number" id="div-input">
+                            <input type="hidden" id="div-answer">
+                        </div>
+                        <div class="col-2">
+                            <input type="button" class="btn btn-secondary btn-block" id="div-btn" value="Submit" onclick="compareDiv(document.getElementById('div-answer').value, document.getElementById('div-input').value, this)">
+                        </div>
+                    </div>
+                    <div class="form-row" id="btn-pad">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-2">
+                            <input type="button" class="btn btn-secondary btn-block" value="Clear Form" onclick="clearForm()">
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2">
+                            <input type="button" class="btn btn-secondary btn-block" value="Reset Record" onclick="resetForm()">
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6" id="display-area">
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </body>
+</html>

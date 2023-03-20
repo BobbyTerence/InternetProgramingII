@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Radio Switches</title>
+        <meta charset="utf-8">
+        <meta num2="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <style>
+            body {
+                font-family: arial;
+                font-size: 15pt;
+                background: rgb(106, 150, 106);
+                color: aquamarine;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 30pt;
+                font-weight: 600;
+                margin-top: .75em;
+                margin-bottom: .75em;
+            }
+
+            #img-frame {
+                background: rgb(60, 90, 60);
+                margin-bottom: .75em;
+                border-radius: .85em;
+            }
+
+            #img-space {
+                margin: .25em;
+            }
+        </style>
+
+        <script src="imageSwitch.js"></script>
+    </head>
+
+    <body class="container-fluid" onload="changePic(this.value)">
+        <h1>The Native Croc's</h1>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 text-center" id="img-frame">
+                <div id="img-space">
+                    <!--I will be using java script and using this div to switch between four different images-->
+                </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 form-check form-check-inline" id="radio-pad">
+                <input class="form-check-input" type="radio" checked name="croco" id="croco-default" value="default" onchange="changePic(this.value)">
+                <label class="form-check-label" for="croco-default">
+                    Default Croco
+                </label>
+                <input class="form-check-input" type="radio" name="croco" id="croco-florida" value="florida" onchange="changePic(this.value)">
+                <label class="form-check-label" for="croco-florida">
+                    Floridian Croco
+                </label>
+                <input class="form-check-input" type="radio" name="croco" id="croco-joe-dirt" value="joe-dirt" onchange="changePic(this.value)">
+                <label class="form-check-label" for="croco-jooe-dirt">
+                    Peak Male Performance
+                </label>
+                <input class="form-check-input" type="radio" name="croco" id="croco-glocko" value="glocko" onchange="changePic(this.value)">
+                <label class="form-check-label" for="croco-glocko">
+                    Croco Wit Da Glocko
+                </label>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </body>
+</html>
