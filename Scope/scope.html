@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Testing Scope</title>
+        <meta charset="utf-8">
+        <meta num2="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <style>
+            body {
+                background-color: #8b9783;
+                color: #d6ffc2;
+                text-align: center;
+            }
+
+            h1 {
+                text-align: center;
+                margin: 1.5em;
+            }
+
+            .btn {
+                color: #d6ffc2;
+                border-style: solid;
+                border-color: #d6ffc2;
+            }
+
+            #higher-lower {
+                height: 325px;
+                background-color: #3a453c;
+                border-style: inset;
+                border-radius: 15px;
+                border-top-color: #65ff5f;
+                border-left-color: #65ff5f;
+                border-right-color: #d6ffc2;
+                border-bottom-color: #d6ffc2;
+                margin-bottom: 3em;
+            }
+
+            #higher-lower p {
+                margin-top: .15em;
+            }
+        </style>
+
+        <script src="scopeTest.js"></script>
+    </head>
+
+    <body class="container-fluid" onload="generateNum()">
+        <h1>I'm Thinking of a Number...</h1>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" id="higher-lower">
+               <!--This is where the message of needing to guess higher or lower will go-->
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3" id="submit">
+                <form>
+                    <label for="number-guess">Guess: </label>
+                    <input tpye="number" id="user-guess">
+                    <button type="button" class="btn" onclick="submitGuess()">Submit Guess</button>
+                </form>
+            </div>
+            <div class="col-md-3" id="generate-num">
+                <form>
+                    <button type="button" class="btn" onclick="generateNum()">Generate Num</button>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </body>
+</html>

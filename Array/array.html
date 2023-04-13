@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Fortune Teller</title>
+        <meta charset="utf-8">
+        <meta num2="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <style>
+            body {
+                font-family: arial;
+                font-size: 15pt;
+                background: rgb(106, 150, 106);
+                color: aquamarine;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 30pt;
+                font-weight: 600;
+                margin-top: .75em;
+                margin-bottom: .75em;
+            }
+
+            #display-frame {
+                background: rgb(60, 90, 60);
+                height: 300px;
+                border-style: inset;
+                border-radius: 15px;
+                border-top-color: #65ff5f;
+                border-left-color: #65ff5f;
+                border-right-color: #d6ffc2;
+                border-bottom-color: #d6ffc2;
+                margin-bottom: 3em;
+            }
+
+            #display-space {
+                margin: auto;
+            }
+
+            .btn-secondary {
+                background-color: #d6ffc2;
+                color:rgb(60, 90, 60);
+                border-color:rgb(60, 90, 60);
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+
+            #display-space {
+                margin-top: 130px;
+                margin-bottom: 100px;
+                text-align: center;
+            }
+        </style>
+
+        <script src="fortune8.js"></script>
+    </head>
+
+    <body class="container-fluid">
+        <h1>Fortune is Here</h1>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 text-center" id="display-frame">
+                <div id="display-space">
+                    <!--I will be using java script and using this div to switch between four different images-->
+                </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="row">
+           <div class="col-sm-4"></div>
+           <form class="col-sm-4 text-center">
+                <div class="form-group">
+                    <button type="button" id="eight-ball" class="btn btn-secondary" onclick="generateRand(document.getElementById('eight-ball').id)">Eightball Answer</button>
+                    <button type="button" id="fortune" class="btn btn-secondary" onclick="generateRand(document.getElementById('fortune').id)">Fortune Cookie</button>
+                </div>
+           </form>
+           <div class="col-sm-4"></div>
+        </div>
+    </body>
+</html>
