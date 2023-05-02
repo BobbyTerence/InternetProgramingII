@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Button Creation Test</title>
+        <meta charset="utf-8">
+        <meta num2="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <style>
+            h1 {
+                margin-top: 30px;
+                text-align: center;
+            }
+        </style>
+
+        <script>
+            function generateGame() {
+                const button = document.createElement('button')
+
+                button.innerText = 'Button made with JS';
+                button.id = 'test-btn';
+
+                button.addEventListener('click', () => {
+                    // When there is a "click"
+                    // it shows an alert in the browser
+                    alert('Oh, you clicked me!');
+                });
+
+                document.getElementById('button-test').appendChild(button);
+            }
+        </script>
+    </head>
+
+    <body class="container-fluid" id="onload" onload="generateGame()">
+        <h1>Chimp Test</h1>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" id="button-test">
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </body>
+</html>

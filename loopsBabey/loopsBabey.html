@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Loop Examples</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<style>
+		
+		h1	{text-align: center;
+		}
+		
+		body 	{background-color: #ffff99;
+		}
+        
+        #temp-table {
+            text-align: center;
+            border-style: solid;
+            border-color: #000; 
+        }
+	</style>
+	
+	<script src="loopsBabey.js"></script>
+</head>
+<body onload="celciusLoop()">
+
+    <div class="container-fluid">
+        <h1>Temperature Converter</h1>
+        
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <table class="table table-striped" id="temp-table">
+                    
+                </table>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+            <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8" id="buttonDiv">
+                <div class="row">
+                    <div class="col">
+                        <input type="radio" id="celcius" name="temp-base" value="celcius" checked onchange="celciusLoop()">
+                        <label for="celcius">Celcius</label>
+                    </div>
+                    <div class="col">
+                        <input type="radio" id="fahrenheight" name="temp-base" value="fahrenheight" onchange="fahrenheightLoop()">
+                        <label for="fahrenheight">Fahrenheight</label>
+                    </div>
+                    
+                </div>	
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+</body>
+</html>
