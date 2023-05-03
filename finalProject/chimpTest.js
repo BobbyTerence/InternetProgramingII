@@ -18,7 +18,7 @@ const wordBank = [
 ];
 
 //Array to be used to keeep track of which indexes have beeen shown, only requiring a number comparison and not a string comparison
-const seenIndex = [];
+const seenIndex = new Array(1);
 
 //Global constants to kepe track of life
 const TOTALLIVES = 3;
@@ -36,13 +36,17 @@ var indexNum = 0;
 //Create header elements to keeep track of high score and current score
 var scoreHead = document.createElement('h2');
 var recordHead = document.createElement('h2');
+var livesMarker = document.createElement('h3');
 
-//Variable to make changing the score div easier to do
-const scoreEdit = document.getElementById('score-display');
 
 function generateGame() {
   //Create a variable to lessen typing document.getElementById()
   const divEdit = document.getElementById('btn-pad');
+  const scoreEdit = document.getElementById('score-display');
+  const livesEdit = document.getElementById('lives-left');
+
+  livesMarker.innerText = "Lives Left: " + TOTALLIVES;
+  livesEdit.appendChild(livesMarker);
 
   //Create button elements
   const seenBtn = document.createElement('button');
@@ -68,10 +72,10 @@ function generateGame() {
   diffBtn.addEventListener('click', compare);
   diffBtn.addEventListener('click', randWord);
 
-  /*//Append Score and Record elements to necessary Div
+  //Append Score and Record elements to necessary Div
   scoreEdit.innerHTML = "";
   scoreEdit.appendChild(scoreHead);
-  scoreEdit.appendChild(recordHead);*/
+  scoreEdit.appendChild(recordHead);
 
   //Add those Game to the btn-pad div
   divEdit.innerHTML = "";
@@ -107,6 +111,7 @@ function compare() {
       if(indexNum == seenIndex[i]) {
         livesLost += 1;
       }
+      
       else {
         score += 1;
         seenIndex.push(indexNum);
@@ -114,6 +119,7 @@ function compare() {
     }
     gameCondition();
   }
+
   else if (this.id == 'seen') {
     var i = 0;
     do {
@@ -128,6 +134,24 @@ function compare() {
       livesLost += 1;
     }
     gameCondition();
+  }
+}
+
+function gameCondition() {
+  const livesEdit = document.getElementById('lives-left');
+
+  var lifeMarker = TOTALLIVES - livesLost;
+
+  if(livesLost <= 3) {
+    livesMarker.innerHTML = "Lives Left: " + lifeMarker;
+    scoreHead.innerText = "Score: " + score;
+    if(score > record) {
+      record = score
+      recordHead.innerText = "High Score: " + record;
+    }
+  }
+  else if (livesLost == 3) {
+
   }
 }
   
